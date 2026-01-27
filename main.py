@@ -22,5 +22,4 @@ class Area():
         pygame.draw.rect(window,frame_color,self.rect,thickness)
 class Lable(Area):
     def set_text(self,text,fsize=12,textcolor=(0,0,0)):
-
-
+        self.image=pygame.font.SysFont("verdana",fsize).render(text,True,textcolor)
