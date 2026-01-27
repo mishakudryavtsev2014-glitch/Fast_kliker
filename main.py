@@ -23,3 +23,11 @@ class Area():
 class Lable(Area):
     def set_text(self,text,fsize=12,textcolor=(0,0,0)):
         self.image=pygame.font.SysFont("verdana",fsize).render(text,True,textcolor)
+    def draw(self,shift_x=0,shift_y=0):
+        self.fill()
+        window.blit(self.image,(self.rect.x+shift_x,self.rect.y+shift_y))
+numkards=4
+cards=[]
+x=70
+run=True
+while run:
